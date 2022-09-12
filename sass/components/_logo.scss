@@ -1,0 +1,36 @@
+.logo {
+  font-family: "Raleway";
+  @include font(700, 24px, 1.17);
+  text-align: center;
+  color: #000000;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
+.header__logo {
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}
+
+.logo__span--color-blue {
+  color: var(--btn-color);
+}
+
+.logo__text--color-white {
+  color: #fff;
+}

@@ -1,0 +1,122 @@
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    @include flex;
+  }
+}
+
+.gallery-list__item {
+  margin-right: 8px;
+  margin-bottom: 15px;
+  &:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 364px) and (max-width: 475px) {
+    &:nth-child(n + 4) {
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.gallery-list__btn {
+  @include font(500, 16px, 1.63);
+  font-family: "Roboto";
+  border-radius: 4px;
+  padding: 6px 22px 6px 22px;
+  text-align: center;
+  cursor: pointer;
+  border: 0;
+  color: var(--main-color);
+  background-color: var(--btn-gallery-color);
+  transition: background-color 250ms var(--cubic), color 250ms var(--cubic),
+    box-shadow 250ms var(--cubic);
+  &:hover,
+  &:focus {
+    background-color: var(--btn-color);
+    color: #fff;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+  @media screen and (min-width: 768px) {
+    margin-top: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 50px;
+  }
+}
+
+.card-set__item {
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  transition: box-shadow 250ms var(--cubic);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  &:hover .project__text,
+  &:focus .project__text {
+    transform: translateY(0);
+  }
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+  &:nth-child(n + 7) {
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 60px) / 3);
+  }
+}
+
+.card-set__box {
+  padding: 20px 24px;
+  width: 100%;
+  border: 1px solid #eeeeee;
+}
+
+.card-set__title {
+  @include font(700, 18px, 2, 0.06em);
+  color: var(--main-color);
+}
+
+.card-set__text {
+  @include font(400, 16px, 1.88);
+  color: var(--second-color);
+}
+
+.project {
+  position: relative;
+  overflow: hidden;
+}
+
+.project__text {
+  @include font(400, 18px, 1.6);
+  @include flex;
+  position: absolute;
+  padding-left: 24px;
+  padding-right: 24px;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  top: 0;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms var(--cubic);
+  overflow: auto;
+}

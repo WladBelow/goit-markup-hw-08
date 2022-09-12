@@ -1,0 +1,42 @@
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+.clients__item {
+  @media screen and (min-width: 480px) {
+    width: calc((100% - 60px) / 2);
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 60px) / 3);
+  }
+}
+
+.clients__link {
+  @include flex;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: var(--icon-color);
+  transition: fill 250ms var(--cubic), border-color 250ms var(--cubic);
+  &:hover,
+  &:focus {
+    fill: var(--btn-color);
+    border-color: var(--btn-color);
+  }
+  @media screen and (min-width: 480px) {
+    width: 210px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
+}

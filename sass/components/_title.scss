@@ -1,0 +1,22 @@
+.section-title {
+  @include font(700, 28px, 1.18);
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--main-color);
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+}
+
+.footer-title {
+  @include font(700, 14px, 1.14);
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
+}
