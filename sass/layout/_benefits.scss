@@ -13,10 +13,12 @@
   margin-bottom: 30px;
   &:last-child {
     margin-right: 0;
+    margin-bottom: 0;
   }
   @media screen and (min-width: 768px) {
     width: calc((100% - 60px) / 2);
     margin-right: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -42,4 +44,8 @@
 .benefits__text {
   @include font(400, 14px, 1.71);
   color: var(--second-color);
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
 }
